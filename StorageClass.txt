@@ -1,0 +1,27 @@
+4 Storage Class
+
+    -auto : default used if not stated. Automatic Creation and Removal on Block Entry/Exit
+
+    -register : Suggest to complier to store data in CPU Register. 
+                Useful for local var and func. No Address. Really Fast
+
+    -static : local variables live between function calls. 
+              Will live after function is after. Won't reset. 
+              Live as long as the process
+
+    -extern : for variables that have been declared external to the file in use
+              Useful to use variable for other files
+
+Type of Qualifiers
+    Information about how variable will be used
+
+    const - indicaties it will not change
+            Can be used as function parameter to pervent changes to value
+
+            Ex:
+            void function(const int Array[]) //prevent function from Modifying Address
+
+    volatile - opposite of const.
+               tell complier value can change at anytime. Possibly by external source
+
+Header files

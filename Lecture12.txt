@@ -1,0 +1,54 @@
+Variadic functions: Variable num of arguments
+	**use <stdarg.h>**
+
+func(int ...) - int = # of arg passed
+			  - ... = indiates the function will have arguments determined at runtime
+			  		  Arguments are arbitrary in number and type
+
+va_list (variable arg list) = A data type from stdarg.h stands for variable argument list. (It is possible we will need to set to argument list)
+
+va_start(ptr, int) (pointer to the first argument) = set ptr will point to first argument from function
+DO NOT PASS SHORT, CHAR OR FLOAT to va_arg
+
+
+
+Pointers to Functions:
+	pass function as argument ==> we will pass pointer
+
+Why?
+	Example: Lets say we have a taste of structures containing an { Employee's number, Employee's name, Employee's phone number, Employee's Salary}
+	
+	want to search for a particular employee number or by their name
+
+	Several Ways to do this:
+		1. Could write two functions = { (will work but this will duplicate code. Essentially realing table traversing table)
+											searchEmployeeByNumber()- will do less than or greater than to table value
+											searchEmployeeByName()	- will do String compares to table value
+										}
+		2. Write a single search function {searchEmployeeTable() - can search for any fields value in table}
+
+		 
+Pre Processor
+	Before compiler is run source code passes through program called pre processor
+
+	Source Code == > Pre pocessor == > Optimized Source Code == > compiler
+
+	Pre Processor looks for pre processor directives => start with #
+
+	#include text from file => libraries or header files
+	#define  define a macro (will discuss below)
+	#IFNDEF	 IF NOT DEFINED
+	#IFDEF 	 IF DEFINED
+	#IF
+	#ELSE
+	#ELIF
+	#ENDIF
+	#undef
+	#line
+	#error
+	#pragma
+
+
+Macro's Can also act as templates. Meaning it will Not replace literally but fill in different depending on input Arguments.
+Advantage = not care about data type
+Downside = 	functions we defined one and (an be called numerous times.) MACRO's are literally Copied and pasted in each location it is used

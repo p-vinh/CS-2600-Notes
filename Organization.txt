@@ -1,0 +1,25 @@
+Getting Organized (Professional Developer)
+
+1. Use Repository -	 We are using git. There are other Version Control systems
+2. Backup - We use GitHub. There are others
+3. Create Makefile - there are other builds systems
+
+Subdirectries - ALT
+	git
+		- C
+			- Program
+		- Java
+		- Python
+	
+
+
+ENFORCED MUST DO
+	- GIT 
+		- Program
+			- Makefile 
+			- src 		Source Directory  *.c
+			- include	Include Directory *.h
+			- obj		Object Directory  *.o, *.obj
+			- bin		Compiled Binary	  *.exe, *.out
+			- doc		Documentation about Program
+			- lib		Libary			  *.so, *.dll, *.dylib
